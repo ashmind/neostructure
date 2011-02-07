@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,7 +7,7 @@ using System.Diagnostics.Contracts;
 
 using AshMind.Web.Mvc.KeyModel;
 
-namespace X.Web.Controllers {
+namespace Neostructure.Web.Controllers {
     [HandleError]
     [UseKeyProvider]
     public abstract class ControllerBase : Controller {

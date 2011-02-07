@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using NHibernate;
 using NHibernate.Engine;
 using NHibernate.Proxy;
 
-namespace X.Infrastructure.Repositories.Internal {
+namespace Neostructure.Infrastructure.Repositories.Internal {
     internal static class SessionExtensions {
         public static object GetIdentifierOrNull(this ISession session, object obj) {
             // I can't use NH GetIndetifier because it throws on not-found

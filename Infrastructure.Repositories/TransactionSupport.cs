@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 
-using X.Infrastructure.Interfaces;
-using X.Infrastructure.Repositories.Internal;
+using Neostructure.Infrastructure.Interfaces;
+using Neostructure.Infrastructure.Repositories.Internal;
 
-namespace X.Infrastructure.Repositories {
+namespace Neostructure.Infrastructure.Repositories {
     internal class TransactionSupport : ITransactionSupport {
         private readonly ISessionContext context;
 

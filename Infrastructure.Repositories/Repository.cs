@@ -6,10 +6,10 @@ using NHibernate;
 using NHibernate.Impl;
 using NHibernate.Linq;
 
-using X.Infrastructure.Interfaces;
-using X.Infrastructure.Repositories.Internal;
+using Neostructure.Infrastructure.Interfaces;
+using Neostructure.Infrastructure.Repositories.Internal;
 
-namespace X.Infrastructure.Repositories {
+namespace Neostructure.Infrastructure.Repositories {
     public class Repository<T> : IRepository<T> {
         public event EventHandler Reconnected = delegate {}; 
 

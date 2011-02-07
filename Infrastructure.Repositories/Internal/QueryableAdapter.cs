@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ using NHibernate.Linq;
 
 using System.Linq.Expressions;
 
-namespace X.Infrastructure.Repositories.Internal {
+namespace Neostructure.Infrastructure.Repositories.Internal {
     internal class QueryableAdapter<T> : IRepositoryQueryable<T> {
         private readonly NhQueryable<T> inner;
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
@@ -8,7 +8,7 @@ using NHibernate.Engine;
 using NHibernate.Type;
 using NHibernate.UserTypes;
 
-namespace X.Repositories.UserTypes {
+namespace Neostructure.Repositories.UserTypes {
     /// <summary>
     /// The abstract base class for the hybrids between NHibernate composite and user types.
     /// </summary>

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace X.Infrastructure {
+namespace Neostructure.Infrastructure {
     public interface ITransactionSupport {
         void DoInTransaction(Action action);
     }

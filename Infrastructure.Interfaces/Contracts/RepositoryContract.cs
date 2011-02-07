@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics.Contracts;
 
-namespace X.Infrastructure.Interfaces.Contracts {
+namespace Neostructure.Infrastructure.Interfaces.Contracts {
     [ContractClassFor(typeof(IRepository<>))]
     internal abstract class RepositoryContract<T> : IRepository<T> {
         public event EventHandler Reconnected;

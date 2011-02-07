@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics.Contracts;
 
-using X.Infrastructure.Interfaces.Contracts;
+using Neostructure.Infrastructure.Interfaces.Contracts;
 
-namespace X.Infrastructure.Interfaces {
+namespace Neostructure.Infrastructure.Interfaces {
     [ContractClass(typeof(RepositoryContract<>))]
     public interface IRepository<T> {
         object Save(T entity);

@@ -1,9 +1,9 @@
-﻿using System.Linq;
+using System.Linq;
 
-using X.Infrastructure.Interfaces;
-using X.Infrastructure.Repositories.Internal;
+using Neostructure.Infrastructure.Interfaces;
+using Neostructure.Infrastructure.Repositories.Internal;
 
-namespace X.Infrastructure.Repositories {
+namespace Neostructure.Infrastructure.Repositories {
     public class KeyProvider : IKeyProvider {
         protected ISessionContext Context { get; private set; }
 

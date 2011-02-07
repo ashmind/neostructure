@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +12,10 @@ using AshMind.Extensions;
 using AshMind.Web.Mvc;
 using AshMind.Web.Mvc.Routing;
 
-using X.Infrastructure.Interfaces;
+using Neostructure.Infrastructure.Interfaces;
 using AshMind.Web.Mvc.KeyModel;
 
-namespace X.Web {
+namespace Neostructure.Web {
     public class MvcApplication : ConfiguredMvcApplicationBase {
         protected override void RegisterRoutes(RouteCollection routes) {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -46,7 +46,7 @@ namespace X.Web {
         }
 
         protected override bool ShouldDiscoverModulesIn(string path) {
-            return path.Contains("X.");
+            return path.Contains("Neostructure.");
         }
     }
 }

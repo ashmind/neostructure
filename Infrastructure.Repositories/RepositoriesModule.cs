@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -6,10 +6,10 @@ using System.Text;
 
 using Autofac;
 
-using X.Infrastructure.Interfaces;
-using X.Infrastructure.Repositories.Internal;
+using Neostructure.Infrastructure.Interfaces;
+using Neostructure.Infrastructure.Repositories.Internal;
 
-namespace X.Infrastructure.Repositories {
+namespace Neostructure.Infrastructure.Repositories {
     public class RepositoriesModule : Autofac.Module {
         protected override void Load(ContainerBuilder builder) {
             var sessionFactory = Database.Configure().BuildSessionFactory();

@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Linq.Expressions;
 
 using NHibernate.Linq;
-using X.Infrastructure.Repositories.Internal;
+using Neostructure.Infrastructure.Repositories.Internal;
 
-namespace X.Infrastructure.Repositories.Internal {
+namespace Neostructure.Infrastructure.Repositories.Internal {
     public class KeyEnabledQueryProvider : IQueryProvider {
         private readonly IQueryProvider inner;
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Reflection;
 using NHibernate.Linq.Visitors;
 using NHibernate.Mapping;
 
-namespace X.Infrastructure.Repositories.Internal {
+namespace Neostructure.Infrastructure.Repositories.Internal {
     public class KeyMethodToIdRewritingVisitor : ExpressionVisitor {
         #region FakePropertyInfo
 
