@@ -1,0 +1,16 @@
+
+/Domain.Services/bin
+/Domain.Services/obj
+/Infrastructure.Interfaces/obj
+/Infrastructure.Interfaces/bin
+/Infrastructure.Repositories/bin
+/Infrastructure.Repositories/obj
+/$libraries/AshMind.Web.Mvc/bin
+/$libraries/AshMind.Web.Mvc/obj
+/Domain/obj
+/Domain/bin
+*.suo
+/Web.Tests/obj
+/Web.Tests/bin
+/Web/obj
+/Web/Bin

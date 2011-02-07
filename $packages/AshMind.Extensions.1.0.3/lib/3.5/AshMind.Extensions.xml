@@ -1,0 +1,913 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>AshMind.Extensions</name>
+  </assembly>
+  <members>
+    <member name="T:AshMind.Extensions.StringExtensions">
+      <summary>
+            Provides a set of extension methods for operations on String.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+      <summary>
+            Indicates whether the specified <see cref="T:System.String" /> object is a null reference (<c>Nothing</c> in Visual Basic) or 
+            an <see cref="F:System.String.Empty">Empty</see> string.
+            </summary>
+      <param name="value">A <see cref="T:System.String" /> value.</param>
+      <returns>
+        <c>true</c> if the <paramref name="value" /> is a null reference (<c>Nothing</c> in Visual Basic) or an empty string (""); otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:AshMind.Extensions.StringExtensions.IsNotNullOrEmpty(System.String)" />
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.IsNotNullOrEmpty(System.String)">
+      <summary>
+            Indicates whether the specified <see cref="T:System.String" /> object is not a null reference (<c>Nothing</c> in Visual Basic) and 
+            not an <see cref="F:System.String.Empty">Empty</see> string.
+            </summary>
+      <param name="value">A <see cref="T:System.String" /> value.</param>
+      <returns>
+        <c>false</c> if the <paramref name="value" /> is a null reference (<c>Nothing</c> in Visual Basic) or an empty string (""); otherwise, <c>true</c>.
+            </returns>
+      <seealso cref="M:AshMind.Extensions.StringExtensions.IsNullOrEmpty(System.String)" />
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.Split(System.String,System.String[])">
+      <summary>
+            Returns a string array that contains the substrings in this string that are delimited by elements of a specified string array.
+            </summary>
+      <param name="value">A <see cref="T:System.String" /> value to split.</param>
+      <param name="separator">An array of strings that delimit the substrings in this string, an empty array that contains no delimiters, or a null reference (<c>Nothing</c> in Visual Basic).</param>
+      <returns>
+                An array whose elements contain the substrings in this string that are delimited by one or more strings in <paramref name="separator" />.
+            </returns>
+      <seealso cref="M:System.String.Split(System.String[],System.StringSplitOptions)" />
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.Split(System.String,System.String,System.StringSplitOptions)">
+      <summary>
+            Returns a string array that contains the substrings in this string that are delimited by a specified string.
+            </summary>
+      <param name="value">A <see cref="T:System.String" /> value to split.</param>
+      <param name="separator">An string that delimits the substrings in this string, or a null reference (<c>Nothing</c> in Visual Basic).</param>
+      <param name="options">
+        <see cref="F:System.StringSplitOptions.RemoveEmptyEntries" /> to omit empty array elements from the array returned; or <see cref="F:System.StringSplitOptions.None" /> to include empty array elements in the array returned. </param>
+      <returns>
+                An array whose elements contain the substrings in this string that are delimited by <paramref name="separator" />.
+            </returns>
+      <seealso cref="M:System.String.Split(System.String[],System.StringSplitOptions)" />
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.Contains(System.String,System.String,System.StringComparison)">
+      <summary>
+            Returns a value indicating whether the specified String object occurs within this string.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to be analyzed.</param>
+      <param name="value">The <see cref="T:System.String" /> object to seek.</param>
+      <param name="comparisonType">One of the <see cref="T:System.StringComparison" /> values that determines how this string and value are compared.</param>
+      <returns>
+        <c>true</c> if the value parameter occurs within this string, or if value is the empty string (""); otherwise, <c>false</c>.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringBefore(System.String,System.String)">
+      <summary>
+            Returns a substring preceding the first occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value following the substring.</param>
+      <returns>
+                Substring preceding the first occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringBefore(System.String,System.String,System.StringComparison)">
+      <summary>
+            Returns a substring preceding the first occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value following the substring.</param>
+      <param name="comparisonType">One of the <see cref="T:System.StringComparison" /> values that determines how <paramref name="original" /> and <paramref name="value" /> are compared.</param>
+      <returns>
+                Substring preceding the first occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringBeforeLast(System.String,System.String)">
+      <summary>
+            Returns a substring before the last occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value following the substring.</param>
+      <returns>
+                Substring before the last occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringBeforeLast(System.String,System.String,System.StringComparison)">
+      <summary>
+            Returns a substring preceding the last occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value following the substring.</param>
+      <param name="comparisonType">One of the <see cref="T:System.StringComparison" /> values that determines how <paramref name="original" /> and <paramref name="value" /> are compared.</param>
+      <returns>
+                Substring preceding the last occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringAfter(System.String,System.String)">
+      <summary>
+            Returns a substring following the first occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value preceding the substring.</param>
+      <returns>
+                Substring following the first occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringAfter(System.String,System.String,System.StringComparison)">
+      <summary>
+            Returns a substring following the first occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value preceding the substring.</param>
+      <param name="comparisonType">One of the <see cref="T:System.StringComparison" /> values that determines how <paramref name="original" /> and <paramref name="value" /> are compared.</param>
+      <returns>
+                Substring following the first occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringAfterLast(System.String,System.String)">
+      <summary>
+            Returns a substring following the last occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value preceding the substring.</param>
+      <returns>
+                Substring following the last occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.SubstringAfterLast(System.String,System.String,System.StringComparison)">
+      <summary>
+            Returns a substring following the last occurence of a specified value.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to get substring from.</param>
+      <param name="value">The <see cref="T:System.String" /> value preceding the substring.</param>
+      <param name="comparisonType">One of the <see cref="T:System.StringComparison" /> values that determines how <paramref name="original" /> and <paramref name="value" /> are compared.</param>
+      <returns>
+                Substring following the last occurence of <paramref name="value" />, if found; otherwise, the <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.RemoveStart(System.String,System.String)">
+      <summary>
+            Removes a leading occurence of the specified value, if present.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to remove from.</param>
+      <param name="prefix">The <see cref="T:System.String" /> value to be removed if present.</param>
+      <returns>
+                The string that remains after an occurrence of <paramref name="prefix" /> is removed from the start of <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="M:AshMind.Extensions.StringExtensions.RemoveEnd(System.String,System.String)">
+      <summary>
+            Removes a trailing occurence of the specified value, if present.
+            </summary>
+      <param name="original">The <see cref="T:System.String" /> value to remove from.</param>
+      <param name="suffix">The <see cref="T:System.String" /> value to be removed if present.</param>
+      <returns>
+                The string that remains after an occurrence of <paramref name="suffix" /> is removed from the end of <paramref name="original" /> string.
+            </returns>
+      <pure />
+    </member>
+    <member name="T:AshMind.Extensions.DoubleExtensions">
+      <summary>
+            Provides a set of extension methods for operations on Double.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.DoubleExtensions.IsNaN(System.Double)">
+      <summary>Returns a value indicating whether the specified number evaluates to a value that is not a number (<see cref="F:System.Double.NaN" />).</summary>
+      <param name="value">A <see cref="T:System.Double" /> value.</param>
+      <returns>true if <paramref name="value" /> evaluates to <see cref="F:System.Double.NaN" />; otherwise, false.</returns>
+      <seealso cref="M:System.Double.IsNaN(System.Double)" />
+    </member>
+    <member name="M:AshMind.Extensions.DoubleExtensions.IsInfinity(System.Double)">
+      <summary>
+                Returns a value indicating whether the specified number evaluates to positive or negative infinity.
+            </summary>
+      <param name="value">A <see cref="T:System.Double" /> value.</param>
+      <returns>
+                true if <paramref name="value" /> evaluates to <see cref="F:System.Double.PositiveInfinity" /> or <see cref="F:System.Double.NegativeInfinity" />; otherwise, false.
+            </returns>
+      <seealso cref="M:System.Double.IsInfinity(System.Double)" />
+    </member>
+    <member name="M:AshMind.Extensions.DoubleExtensions.IsPositiveInfinity(System.Double)">
+      <summary>
+                Returns a value indicating whether the specified number evaluates to positive infinity.
+            </summary>
+      <param name="value">A <see cref="T:System.Double" /> value.</param>
+      <returns>
+                true if <paramref name="value" /> evaluates to <see cref="F:System.Double.PositiveInfinity" />; otherwise, false.
+            </returns>
+      <seealso cref="M:System.Double.IsPositiveInfinity(System.Double)" />
+    </member>
+    <member name="M:AshMind.Extensions.DoubleExtensions.IsNegativeInfinity(System.Double)">
+      <summary>
+                Returns a value indicating whether the specified number evaluates to negative infinity.
+            </summary>
+      <param name="value">A <see cref="T:System.Double" /> value.</param>
+      <returns>
+                true if <paramref name="value" /> evaluates to <see cref="F:System.Double.NegativeInfinity" />; otherwise, false.
+            </returns>
+      <seealso cref="M:System.Double.IsPositiveInfinity(System.Double)" />
+    </member>
+    <member name="T:AshMind.Extensions.ComparableExtensions">
+      <summary>
+            Provides a set of extension methods for operations on IComparable&lt;&gt;.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.ComparableExtensions.IsGreaterThan``2(``0,``1)">
+      <summary>
+            Determines whether the specified value is greater than another value.
+            </summary>
+      <typeparam name="TComparable">Type of the value to check.</typeparam>
+      <typeparam name="T">Type that the value can be compared with.</typeparam>
+      <param name="left">The value to compare</param>
+      <param name="right">Value to compare with</param>
+      <returns>
+            True if <paramref name="left" /> is greater than <paramref name="right" />; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.ComparableExtensions.IsLesserThan``2(``0,``1)">
+      <summary>
+            Determines whether the specified value is lesser than another value.
+            </summary>
+      <typeparam name="TComparable">Type of the value to check.</typeparam>
+      <typeparam name="T">Type that the value can be compared with.</typeparam>
+      <param name="left">The value to compare</param>
+      <param name="right">Value to compare with</param>
+      <returns>
+            True if <paramref name="left" /> is lesser than <paramref name="right" />; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.ComparableExtensions.IsGreaterThanOrEqual``2(``0,``1)">
+      <summary>
+            Determines whether the specified value is greater than or equal to another value.
+            </summary>
+      <typeparam name="TComparable">Type of the value to check.</typeparam>
+      <typeparam name="T">Type that the value can be compared with.</typeparam>
+      <param name="left">The value to compare</param>
+      <param name="right">Value to compare with</param>
+      <returns>
+            True if <paramref name="left" /> is greater than or equal to <paramref name="right" />; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.ComparableExtensions.IsLesserThanOrEqual``2(``0,``1)">
+      <summary>
+            Determines whether the specified value is lesser than or equal to another value.
+            </summary>
+      <typeparam name="TComparable">Type of the value to check.</typeparam>
+      <typeparam name="T">Type that the value can be compared with.</typeparam>
+      <param name="left">The value to compare</param>
+      <param name="right">Value to compare with</param>
+      <returns>
+            True if <paramref name="left" /> is lesser than or equal to <paramref name="right" />; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.ComparableExtensions.IsBetween``2(``0,``1,``1)">
+      <summary>
+            Determines whether the specified value is between two other values, inclusive.
+            </summary>
+      <typeparam name="TComparable">Type of the value to check.</typeparam>
+      <typeparam name="T">Type that the value can be compared with.</typeparam>
+      <param name="value">The value to compare</param>
+      <param name="left">Minimum value that can cause true to be returned</param>
+      <param name="right">Maximum value that can cause true to be returned</param>
+      <returns>
+            True if the specified value is between the minimm and maximum; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.CollectionExtensions.RemoveWhere``1(System.Collections.Generic.ICollection{``0},System.Func{``0,System.Boolean})">
+      <summary>
+            Removes all elements that match the conditions defined by the specified predicate from the collection.
+            </summary>
+      <param name="collection">
+            The collection from which to remove items.
+            </param>
+      <param name="predicate">
+            The Func&lt;T, bool&gt; delegate that defines the conditions of the elements to remove.
+            </param>
+      <returns>The number of elements that were removed from the collection.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.CollectionExtensions.RemoveWhere``1(System.Collections.Generic.ICollection{``0},System.Func{``0,System.Int32,System.Boolean})">
+      <summary>
+            Removes all elements that match the conditions defined by the specified predicate from the collection.
+            </summary>
+      <param name="collection">
+            The collection from which to remove items.
+            </param>
+      <param name="predicate">
+            The Func&lt;T, int, bool&gt; delegate that defines the conditions of the elements to remove;
+            the second parameter of the delegate represents the index of the element.
+            </param>
+      <returns>The number of elements that were removed from the collection.</returns>
+      <requires exception="T:System.ArgumentNullException">collection != null</requires>
+      <exception cref="T:System.ArgumentNullException">collection == null</exception>
+      <requires exception="T:System.ArgumentNullException">predicate != null</requires>
+      <exception cref="T:System.ArgumentNullException">predicate == null</exception>
+    </member>
+    <member name="T:AshMind.Extensions.DelegateExtensions">
+      <summary>
+            Provides a set of static (Shared in Visual Basic) methods for operations on delegates. 
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.AsPredicate``1(System.Func{``0,System.Boolean})">
+      <summary>
+            Converts Func&lt;T, bool&gt; into a <see cref="T:System.Predicate`1" />.
+            </summary>
+      <param name="function">A function to convert.</param>
+      <returns>Predicate&lt;T&gt; identical to the original function.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.AsFunction``1(System.Predicate{``0})">
+      <summary>
+            Converts <see cref="T:System.Predicate`1" /> into a Func&lt;T, bool&gt;.
+            </summary>
+      <param name="predicate">A predicate to convert.</param>
+      <returns>Func&lt;T, bool&gt; identical to the original predicate.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.AsComparison``1(System.Func{``0,``0,System.Int32})">
+      <summary>
+            Converts Func&lt;T, T, int&gt; into a <see cref="T:System.Comparison`1" />.
+            </summary>
+      <param name="function">A function to convert.</param>
+      <returns>
+        <see cref="T:System.Comparison`1" /> identical to the original function.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.AsFunction``1(System.Comparison{``0})">
+      <summary>
+            Converts <see cref="T:System.Comparison`1" /> into a Func&lt;T, T, int&gt;.
+            </summary>
+      <param name="comparison">A comparison to convert.</param>
+      <returns>Func&lt;T, T, int&gt; identical to the original comparison.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.ToComparer``1(System.Comparison{``0})">
+      <summary>
+            Converts <see cref="T:System.Comparison`1" /> into an <see cref="T:System.Collections.Generic.IComparer`1" />.
+            </summary>
+      <param name="comparison">A comparison to convert.</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IComparer`1" /> that acts identical to the original comparison.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.DelegateExtensions.ToComparer``1(System.Func{``0,``0,System.Int32})">
+      <summary>
+            Converts Func&lt;T, T, int&gt; into an <see cref="T:System.Collections.Generic.IComparer`1" />.
+            </summary>
+      <param name="function">A function to convert.</param>
+      <returns>
+        <see cref="T:System.Collections.Generic.IComparer`1" /> that acts identical to the original function.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.EnumerableExtensions.Any``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
+      <summary>
+            Determines whether any element of a sequence satisfies a condition.
+            </summary>
+      <typeparam name="TSource">
+              The type of the elements of <paramref name="source" />.
+            </typeparam>
+      <param name="source">
+              An <see cref="T:System.Collections.Generic.IEnumerable`1" /> whose elements to apply the predicate to.
+            </param>
+      <param name="predicate">
+              A function to test each element for a condition;
+              the second parameter of the function represents the index of the element.
+            </param>
+      <returns>
+        <c>true</c> if any elements in the source sequence pass the test in the specified predicate; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Linq.Enumerable.Any``1(System.Collections.Generic.IEnumerable{``0})" />
+      <requires exception="T:System.ArgumentNullException">source != null</requires>
+      <exception cref="T:System.ArgumentNullException">source == null</exception>
+      <requires exception="T:System.ArgumentNullException">predicate != null</requires>
+      <exception cref="T:System.ArgumentNullException">predicate == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.EnumerableExtensions.ToSet``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              Creates a <see cref="T:System.Collections.Generic.HashSet`1" /> from an <see cref="T:System.Collections.Generic.IEnumerable`1" />.
+            </summary>
+      <typeparam name="TSource">
+              The type of the elements of <paramref name="source" />.
+            </typeparam>
+      <param name="source">
+              The <see cref="T:System.Collections.Generic.IEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.HashSet`1" /> from.
+            </param>
+      <returns>
+              A <see cref="T:System.Collections.Generic.HashSet`1" /> that contains elements from the input sequence.
+            </returns>
+      <requires exception="T:System.ArgumentNullException">source != null</requires>
+      <exception cref="T:System.ArgumentNullException">source == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.EnumerableExtensions.ToSet``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              Creates a <see cref="T:System.Collections.Generic.HashSet`1" /> from an <see cref="T:System.Collections.Generic.IEnumerable`1" /> according to a specified comparer.
+            </summary>
+      <typeparam name="TSource">
+              The type of the elements of <paramref name="source" />.
+            </typeparam>
+      <param name="source">
+              The <see cref="T:System.Collections.Generic.IEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.HashSet`1" /> from.
+            </param>
+      <param name="comparer">
+              The <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to compare items.
+            </param>
+      <returns>
+              A <see cref="T:System.Collections.Generic.HashSet`1" /> that contains elements from the input sequence.
+            </returns>
+      <requires exception="T:System.ArgumentNullException">source != null</requires>
+      <exception cref="T:System.ArgumentNullException">source == null</exception>
+    </member>
+    <member name="T:AshMind.Extensions.CharExtensions">
+      <summary>
+            Provides a set of extension methods for operations on Char.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsLetter(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a Unicode letter.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a letter; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsLetter(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsDigit(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a decimal digit.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a decimal digit; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsDigit(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsLetterOrDigit(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a letter or a decimal digit.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a letter or a decimal digit; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsLetterOrDigit(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsNumber(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a number.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a number; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsNumber(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsSymbol(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a symbol character.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a symbol character; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsSymbol(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsControl(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a control character.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a control character; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsControl(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsPunctuation(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a punctuation mark.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a punctuation mark; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsPunctuation(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsSeparator(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a separator character.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a separator character; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsSeparator(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsSurrogate(System.Char)">
+      <summary>
+            Indicates whether the specified character has a surrogate code point.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is a high surrogate or a low surrogate; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsSurrogate(System.Char)" />
+      <seealso cref="M:AshMind.Extensions.CharExtensions.IsHighSurrogate(System.Char)" />
+      <seealso cref="M:AshMind.Extensions.CharExtensions.IsLowSurrogate(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsHighSurrogate(System.Char)">
+      <summary>
+            Indicates whether the specified <see cref="T:System.Char" /> object is a high surrogate.
+            </summary>
+      <param name="c">A character.</param>
+      <returns>
+        <c>true</c> if the numeric value of the <paramref name="c" /> parameter ranges from U+D800 through U+DBFF; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsHighSurrogate(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsLowSurrogate(System.Char)">
+      <summary>
+            Indicates whether the specified <see cref="T:System.Char" /> object is a low surrogate.
+            </summary>
+      <param name="c">A character.</param>
+      <returns>
+        <c>true</c> if the numeric value of the <paramref name="c" /> parameter ranges from U+DC00 through U+DFFF; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsLowSurrogate(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsWhiteSpace(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as white space.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is white space; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsWhiteSpace(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsLower(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a lowercase letter.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is lowercase letter; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsLower(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.IsUpper(System.Char)">
+      <summary>
+            Indicates whether the specified Unicode character is categorized as a uppercase letter.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+        <c>true</c> if <paramref name="c" /> is uppercase letter; otherwise, <c>false</c>.
+            </returns>
+      <seealso cref="M:System.Char.IsUpper(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToLower(System.Char)">
+      <summary>
+              Converts the value of a Unicode character to its lowercase equivalent.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+              The lowercase equivalent of <paramref name="c" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToLower(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToLower(System.Char,System.Globalization.CultureInfo)">
+      <summary>
+              Converts the value of a specified Unicode character to its lowercase equivalent using specified culture-specific formatting information.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <param name="culture">
+              A <see cref="T:System.Globalization.CultureInfo" /> object that supplies culture-specific casing rules, or a null reference (<c>Nothing</c> in Visual Basic).
+            </param>
+      <returns>
+              The lowercase equivalent of <paramref name="c" />, modified according to <paramref name="culture" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToLower(System.Char,System.Globalization.CultureInfo)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToLowerInvariant(System.Char)">
+      <summary>
+              Converts the value of a Unicode character to its lowercase equivalent using the casing rules of the invariant culture.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+              The lowercase equivalent of <paramref name="c" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToLowerInvariant(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToUpper(System.Char)">
+      <summary>
+              Converts the value of a Unicode character to its uppercase equivalent.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+              The uppercase equivalent of <paramref name="c" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToUpper(System.Char)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToUpper(System.Char,System.Globalization.CultureInfo)">
+      <summary>
+              Converts the value of a specified Unicode character to its uppercase equivalent using specified culture-specific formatting information.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <param name="culture">
+              A <see cref="T:System.Globalization.CultureInfo" /> object that supplies culture-specific casing rules, or a null reference (<c>Nothing</c> in Visual Basic).
+            </param>
+      <returns>
+              The uppercase equivalent of <paramref name="c" />, modified according to <paramref name="culture" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToUpper(System.Char,System.Globalization.CultureInfo)" />
+    </member>
+    <member name="M:AshMind.Extensions.CharExtensions.ToUpperInvariant(System.Char)">
+      <summary>
+              Converts the value of a Unicode character to its uppercase equivalent using the casing rules of the invariant culture.
+            </summary>
+      <param name="c">A Unicode character.</param>
+      <returns>
+              The uppercase equivalent of <paramref name="c" />, or the unchanged value of <paramref name="c" />, if <paramref name="c" /> is already lowercase or not alphabetic.
+            </returns>
+      <seealso cref="M:System.Char.ToUpperInvariant(System.Char)" />
+    </member>
+    <member name="T:AshMind.Extensions.Int32Extensions">
+      <summary>
+            Provides a set of extension methods for operations on Int32.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.Int32Extensions.IsBetween(System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Determines the specified value in between two other values, inclusive.
+            </summary>
+      <param name="value">The value to compare</param>
+      <param name="left">Minimum value that can cause true to be returned</param>
+      <param name="right">Maximum value that can cause true to be returned</param>
+      <returns>
+            True if the specified value is between the minimm and maximum; otherwise, false.
+            </returns>
+    </member>
+    <member name="M:AshMind.Extensions.Int32Extensions.Times(System.Int32,System.Action)">
+      <summary>
+            Repeats the specified action given number of times.
+            </summary>
+      <param name="count">Count of times action should be repeated.</param>
+      <param name="action">Action to repeat.</param>
+    </member>
+    <member name="M:AshMind.Extensions.Int32Extensions.Times(System.Int32,System.Action{System.Int32})">
+      <summary>
+            Repeats the specified action given number of times.
+            </summary>
+      <param name="count">Count of times action should be repeated.</param>
+      <param name="action">Action to repeat, receives current repetition index (starting from 0).</param>
+    </member>
+    <member name="M:AshMind.Extensions.Int32Extensions.Times``1(System.Int32,System.Func{``0})">
+      <summary>
+            Repeats the specified function given number of times and collects all results into an array.
+            </summary>
+      <typeparam name="T">Type of the function return value.</typeparam>
+      <param name="count">Count of times function should be repeated.</param>
+      <param name="func">Function to repeat</param>
+      <returns>Array of all function call results.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.Int32Extensions.Times``1(System.Int32,System.Func{System.Int32,``0})">
+      <summary>
+            Repeats the specified function given number of times and collects all results into an array.
+            </summary>
+      <typeparam name="T">Type of the function return value.</typeparam>
+      <param name="count">Count of times function should be repeated.</param>
+      <param name="func">Function to repeat, receives current repetition index (starting from 0).</param>
+      <returns>Array of all function call results.</returns>
+    </member>
+    <member name="T:AshMind.Extensions.ListExtensions">
+      <summary>
+            Provides a set of extension methods for operations on <see cref="T:System.Collections.Generic.IList`1" />.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.ListExtensions.AsReadOnly``1(System.Collections.Generic.IList{``0})">
+      <summary>
+            Returns the input typed as <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />. 
+            </summary>
+      <typeparam name="T">The type of the elements of <paramref name="list" />.</typeparam>
+      <param name="list">The list to type as <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /></param>
+      <returns>The input list typed as <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" />.</returns>
+      <remarks>
+             For instances of <see cref="T:System.Collections.ObjectModel.ReadOnlyCollection`1" /> the same instance is returned.
+            </remarks>
+    </member>
+    <member name="M:AshMind.Extensions.ListExtensions.InsertRange``1(System.Collections.Generic.IList{``0},System.Int32,System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+            Inserts the elements of a collection into the <see cref="T:System.Collections.Generic.IList`1" /> at the specified index.
+            </summary>
+      <typeparam name="T">The type of the elements of <paramref name="list" />.</typeparam>
+      <param name="list">The list to which new elements will be inserted.</param>
+      <param name="index">The zero-based index at which the new elements should be inserted.</param>
+      <param name="collection">
+            The collection whose elements should be inserted into the <see cref="T:System.Collections.Generic.IList`1" />. The collection itself cannot
+            be a null reference (<c>Nothing</c> in Visual Basic), but it can contain elements that are a null 
+            reference (<c>Nothing</c> in Visual Basic), if type <typeparamref name="T" /> is a reference type.
+            </param>
+    </member>
+    <member name="M:AshMind.Extensions.ListExtensions.RemoveRange``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
+      <summary>
+            Removes a range of elements from the <see cref="T:System.Collections.Generic.IList`1" />.
+            </summary>
+      <typeparam name="T">The type of the elements of <paramref name="list" />.</typeparam>
+      <param name="list">The list to remove range from.</param>
+      <param name="index">The zero-based starting index of the range of elements to remove.</param>
+      <param name="count">The number of elements to remove.</param>
+    </member>
+    <member name="M:AshMind.Extensions.ListExtensions.EnumerateRange``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)">
+      <summary>
+            Produces a limited range of elements from the <see cref="T:System.Collections.Generic.IList`1" />. 
+            </summary>
+      <typeparam name="T">The type of the elements of <paramref name="list" />.</typeparam>
+      <param name="list">The list to produce range from.</param>
+      <param name="index">The zero-based element index at which the range starts.</param>
+      <param name="count">The number of elements in the range.</param>
+      <returns>
+            An <see cref="T:System.Collections.Generic.IEnumerable`1" /> containing all elements from the specified range.
+            </returns>
+    </member>
+    <member name="T:AshMind.Extensions.FormattableExtensions">
+      <summary>
+            Provides a set of extension methods for operations on IFormattable&lt;&gt;.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)">
+      <summary>
+            Formats the value using the specified format provider.
+            </summary>
+      <param name="value">The value to be formatted.</param>
+      <param name="provider">The provider to use to format the value.</param>
+      <returns>The <paramref name="value" /> in the specified format.</returns>
+    </member>
+    <member name="M:AshMind.Extensions.FormattableExtensions.ToInvariantString(System.IFormattable)">
+      <summary>
+            Formats the value using the invariant culture format provider.
+            </summary>
+      <param name="value">The value to be formatted.</param>
+      <returns>The <paramref name="value" />, formatted using invariant culture format provider.</returns>
+    </member>
+    <member name="T:AshMind.Extensions.ReflectionExtensions">
+      <summary>
+            Provides a set of extension methods for operations on reflection classes.
+            </summary>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttributes``1(System.Reflection.ICustomAttributeProvider,System.Boolean)">
+      <summary>
+            Gets the custom attributes of the specified type defined on this member.
+            </summary>
+      <typeparam name="TAttribute">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
+      <param name="member">The member which attributes will be retrieved.</param>
+      <param name="inherit">Specifies whether to search this member's inheritance chain to find the attributes.</param>
+      <returns>An array of custom attributes applied to this member, or an array with zero (0) elements if no attributes have been applied.</returns>
+      <exception cref="T:System.TypeLoadException">A custom attribute type cannot be loaded.</exception>
+      <exception cref="T:System.InvalidOperationException">This member belongs to a type that is loaded into the reflection-only context.</exception>
+      <pure />
+      <requires exception="T:System.ArgumentNullException">member != null</requires>
+      <exception cref="T:System.ArgumentNullException">member == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttributes``1(System.Reflection.ICustomAttributeProvider)">
+      <summary>
+            Gets the custom attributes of the specified type defined on this member.
+            </summary>
+      <typeparam name="TAttribute">The type of attribute to search for. Only attributes that are assignable to this type are returned.</typeparam>
+      <param name="provider">The member which attributes will be retrieved.</param>
+      <returns>An array of custom attributes applied to this member, or an array with zero (0) elements if no attributes have been applied.</returns>
+      <exception cref="T:System.TypeLoadException">A custom attribute type cannot be loaded.</exception>
+      <exception cref="T:System.InvalidOperationException">This member belongs to a type that is loaded into the reflection-only context.</exception>
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttributes(System.Reflection.ICustomAttributeProvider,System.Type)">
+      <summary>
+            Gets the custom attributes of the specified type defined on this member.
+            </summary>
+      <param name="member">The provider which attributes will be retrieved.</param>
+      <param name="attributeType">The type of attribute to search for. Only attributes that are assignable to this type are returned.</param>
+      <returns>An array of custom attributes applied to this member, or an array with zero (0) elements if no attributes have been applied.</returns>
+      <exception cref="T:System.TypeLoadException">A custom attribute type cannot be loaded.</exception>
+      <exception cref="T:System.NullReferenceException">If <paramref name="attributeType" /> is a null reference (Nothing in Visual Basic).</exception>
+      <exception cref="T:System.InvalidOperationException">This member belongs to a type that is loaded into the reflection-only context.</exception>
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttributes(System.Reflection.ICustomAttributeProvider)">
+      <summary>
+            Returns an array containing all the custom attributes defined on this member.
+            </summary>
+      <param name="provider">The member which attributes will be retrieved.</param>
+      <returns>An array that contains all the custom attributes, or an array with zero elements if no attributes are defined.</returns>
+      <exception cref="T:System.TypeLoadException">A custom attribute type cannot be loaded.</exception>
+      <exception cref="T:System.InvalidOperationException">This member belongs to a type that is loaded into the reflection-only context.</exception>
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.CollectionExtensions.RemoveAll``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+      <requires exception="T:System.ArgumentNullException">(() =&gt; {
+    {
+        if (!collection)
+        {
+            local_1 = 0;
+        }
+        else
+        {
+            local_1 = 1;
+        }
+    }
+    return local_1; })()</requires>
+      <exception cref="T:System.ArgumentNullException">!(() =&gt; {
+    {
+        if (!collection)
+        {
+            local_1 = 0;
+        }
+        else
+        {
+            local_1 = 1;
+        }
+    }
+    return local_1; })()</exception>
+      <requires exception="T:System.ArgumentNullException">values != null</requires>
+      <exception cref="T:System.ArgumentNullException">values == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+      <requires exception="T:System.ArgumentNullException">collection != null</requires>
+      <exception cref="T:System.ArgumentNullException">collection == null</exception>
+      <requires exception="T:System.ArgumentNullException">values != null</requires>
+      <exception cref="T:System.ArgumentNullException">values == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.HasInterface``1(System.Type)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">type != null</requires>
+      <exception cref="T:System.ArgumentNullException">type == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttribute``1(System.Reflection.ICustomAttributeProvider)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetValue(System.Reflection.PropertyInfo,System.Object)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">property != null</requires>
+      <exception cref="T:System.ArgumentNullException">property == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.IsSameAsOrSubclassOf``1(System.Type)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">type != null</requires>
+      <exception cref="T:System.ArgumentNullException">type == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.IsGenericTypeDefinedAs(System.Type,System.Type)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">type != null</requires>
+      <exception cref="T:System.ArgumentNullException">type == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.SetValue(System.Reflection.PropertyInfo,System.Object,System.Object)">
+      <requires exception="T:System.ArgumentNullException">property != null</requires>
+      <exception cref="T:System.ArgumentNullException">property == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.IsSubclassOf``1(System.Type)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">type != null</requires>
+      <exception cref="T:System.ArgumentNullException">type == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.IsDefined``1(System.Reflection.ICustomAttributeProvider,System.Boolean)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.IsSameAsOrSubclassOf(System.Type,System.Type)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">type != null</requires>
+      <exception cref="T:System.ArgumentNullException">type == null</exception>
+      <requires exception="T:System.ArgumentNullException">otherType != null</requires>
+      <exception cref="T:System.ArgumentNullException">otherType == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.ReflectionExtensions.GetCustomAttribute``1(System.Reflection.ICustomAttributeProvider,System.Boolean)">
+      <pure />
+      <requires exception="T:System.ArgumentNullException">provider != null</requires>
+      <exception cref="T:System.ArgumentNullException">provider == null</exception>
+    </member>
+    <member name="M:AshMind.Extensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+      <requires exception="T:System.ArgumentNullException">source != null</requires>
+      <exception cref="T:System.ArgumentNullException">source == null</exception>
+      <requires exception="T:System.ArgumentNullException">action != null</requires>
+      <exception cref="T:System.ArgumentNullException">action == null</exception>
+    </member>
+  </members>
+</doc>
