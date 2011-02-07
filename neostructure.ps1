@@ -30,7 +30,7 @@ UnZip "!temp\neostructure.zip" "."
 
 Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs | Where-Object  { ! $_.PSIsContainer } | ForEach-Object {
     $text = [System.IO.File]::ReadAllText($_.FullName)
-    $replaced = [System.Text.RegularExpressions.Regex]::Replace($text, "(?<=^|\W)(X|ProjectTemplate)(?=\W|$)", "${namespace}")
+    $replaced = [System.Text.RegularExpressions.Regex]::Replace($text, "(?<=^|\W)Neostructure(?=\W|$)", "${namespace}")
     if ($replaced -ne $text) {
         [System.IO.File]::WriteAllText($_.FullName, $replaced)
     }
