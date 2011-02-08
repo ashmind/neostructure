@@ -21,19 +21,6 @@ namespace Neostructure.Web {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapLowerCaseRoute(
-                "Root",
-                "",
-                new { controller = "home", action = "index" }
-            );
-
-            routes.MapLowerCaseRoute(
-                "Keyed",
-                "{controller}/{key}/{action}",
-                new { action = "view" },
-                new { key = ".{10,}" }
-            );
-
-            routes.MapLowerCaseRoute(
                 "Default",
                 "{controller}/{action}"
             );

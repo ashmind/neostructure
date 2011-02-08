@@ -28,7 +28,7 @@ MkDir "!temp"
 Download "https://github.com/${repository}/zipball/master" "!temp\neostructure.zip"
 UnZip "!temp\neostructure.zip" "."
 
-Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs | Where-Object  { ! $_.PSIsContainer } | ForEach-Object {
+Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml | Where-Object  { ! $_.PSIsContainer } | ForEach-Object {
     $text = [System.IO.File]::ReadAllText($_.FullName)
     $replaced = [System.Text.RegularExpressions.Regex]::Replace($text, "(?<=^|\W)(X|ProjectTemplate)(?=\W|$)", "${namespace}")
     if ($replaced -ne $text) {

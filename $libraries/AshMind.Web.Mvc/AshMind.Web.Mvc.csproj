@@ -148,7 +148,6 @@
     <Compile Include="Routing\LowerCaseRoute.cs" />
     <Compile Include="Routing\RouteCollectionExtensions.cs" />
     <Compile Include="UrlExtensions.cs" />
-    <Compile Include="Validation\ValidationExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -6,8 +6,8 @@ using System.Web;
 using Autofac;
 
 namespace Neostructure.Web {
-    public class WebModule : Autofac.Module {
-        protected override void Load(Autofac.ContainerBuilder builder) {
+    public class WebModule : Module {
+        protected override void Load(ContainerBuilder builder) {
             base.Load(builder);
         }
     }

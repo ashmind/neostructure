@@ -9,6 +9,6 @@
     <property name='proxyfactory.factory_class'>NHibernate.ByteCode.Castle.ProxyFactoryFactory, NHibernate.ByteCode.Castle</property>
     <property name="connection.connection_string_name">Default</property>
 
-    <mapping assembly="ReuseProject.Infrastructure.Repositories" />
+    <mapping assembly="Neostructure.Infrastructure.Repositories" />
   </session-factory>
 </hibernate-configuration>
