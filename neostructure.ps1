@@ -21,19 +21,30 @@ function UnZip([string]$file, [string]$target) {
     $zip = $shell.NameSpace($file)
     $folder = $shell.NameSpace($target)
     
-    $folder.CopyHere($zip.Items().Item(0).GetFolder.Items())
+    $solution = $zip.Items().Item(0).GetFolder.ParseName("solution").GetFolder
+    
+    $folder.CopyHere($solution.Items())
 }
 
-MkDir "!temp"
-Download "https://github.com/${repository}/zipball/master" "!temp\neostructure.zip"
-UnZip "!temp\neostructure.zip" "."
+$temp = "!temp"
+Write-Host "welcome to neostructure"
+Write-Host "  downloading"
 
-Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml | Where-Object  { ! $_.PSIsContainer } | ForEach-Object {
-    $text = [System.IO.File]::ReadAllText($_.FullName)
-    $replaced = [System.Text.RegularExpressions.Regex]::Replace($text, "(?<=^|\W)Neostructure(?=\W|$)", "${namespace}")
-    if ($replaced -ne $text) {
-        [System.IO.File]::WriteAllText($_.FullName, $replaced)
-    }
-}
+MkDir -F $temp | Out-Null
+Download "https://github.com/${repository}/zipball/master" "${temp}\neostructure.zip"
+
+Write-Host "  unpacking"
+UnZip "${temp}\neostructure.zip" "."
+
+Write-Host "  customizing"
+Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml |
+  Where-Object  { ! $_.PSIsContainer } |
+  ForEach-Object {
+      $text = [System.IO.File]::ReadAllText($_.FullName)
+      $replaced = [System.Text.RegularExpressions.Regex]::Replace($text, "(?<=^|\W)Neostructure(?=\W|$)", "${namespace}")
+      if ($replaced -ne $text) {
+          [System.IO.File]::WriteAllText($_.FullName, $replaced)
+      }
+  }
 
 Rename-Item "Neostructure.sln" "${namespace}.sln"
