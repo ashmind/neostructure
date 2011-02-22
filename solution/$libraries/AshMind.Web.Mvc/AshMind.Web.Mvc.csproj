@@ -137,6 +137,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguredMvcApplicationContract.cs" />
+    <Compile Include="Filters\PreserveModelStateOnRedirectAttribute.cs" />
+    <Compile Include="Filters\UseXHtmlWherePossibleAttribute.cs" />
     <Compile Include="HtmlExtensions.cs" />
     <Compile Include="HtmlSecurityExtensions.cs" />
     <Compile Include="HttpParamActionAttribute.cs" />
