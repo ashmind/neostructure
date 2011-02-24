@@ -48,3 +48,9 @@ Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml |
   }
 
 Rename-Item "Neostructure.sln" "${namespace}.sln"
+
+Write-Host "  cleaning"
+RmDir -R $temp
+
+Write-Host "  opening"
+Invoke-Item ".\${namespace}.sln"
