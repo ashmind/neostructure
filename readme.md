@@ -1,11 +1,13 @@
 Overview
 --------
 
-The basic idea of this project is to provide a .NET application template that can be  
+The basic idea of this project is to provide a .NET application template that can be
+
 1. Compiled as is, so that it is easy to verify it works and update if needed  
 2. Downloaded from any github repository, so it can be updated or forked very easily.
 
-Currently, the project is very specific in libraries and approaches used:  
+Currently, the project is very specific in libraries and approaches used:
+
 * NHibernate for ORM  
 * MigratorDotNet for database migrations  
 * Autofac for IoC  
