@@ -37,7 +37,7 @@ Write-Host "  unpacking"
 UnZip "${temp}\neostructure.zip" "."
 
 Write-Host "  customizing"
-Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml |
+Get-ChildItem -Path "." -Recurse -Include *.csproj,*.cs,*.cfg.xml,*.asax |
   Where-Object  { ! $_.PSIsContainer } |
   ForEach-Object {
       $text = [System.IO.File]::ReadAllText($_.FullName)
