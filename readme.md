@@ -5,11 +5,11 @@ The basic idea of this project is to provide a .NET application template that ca
 1. Compiled as is, so that it is easy to verify it works and update if needed  
 2. Downloaded from any github repository, so it can be updated or forked very easily.
 
-Currently, the project is very specific in libraries and approaches used:
-* NHibernate for ORM
-* MigratorDotNet for database migrations
-* Autofac for IoC
-* ASP.NET MVC + Razor for UI
+Currently, the project is very specific in libraries and approaches used:  
+* NHibernate for ORM  
+* MigratorDotNet for database migrations  
+* Autofac for IoC  
+* ASP.NET MVC + Razor for UI  
 
 I am considering alternate solutions, but since the `neostructure.ps1` is not bound to
 my template, you can easily create, for example, a SharpArchitecture template.
