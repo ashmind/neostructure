@@ -72,7 +72,9 @@ namespace AshMind.Web.Mvc {
         protected virtual void RegisterContainer() {
             var builder = new ContainerBuilder();
 
-            builder.RegisterControllers(BuildManager.GetReferencedAssemblies().Cast<Assembly>().ToArray());
+            var referencedAssemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>();
+
+            builder.RegisterControllers(referencedAssemblies.Where(ShouldDiscoverControllersIn).ToArray());
             DiscoverAllModules(builder);
 
             container = builder.Build();
@@ -104,6 +106,10 @@ namespace AshMind.Web.Mvc {
         }
 
         protected abstract bool ShouldDiscoverModulesIn(string path);
+
+        protected virtual bool ShouldDiscoverControllersIn(Assembly assembly) {
+            return true;
+        }
 
         protected void Application_BeginRequest(object sender, EventArgs e) {
             if (startFailure != null)

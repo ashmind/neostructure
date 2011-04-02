@@ -35,5 +35,9 @@ namespace Neostructure.Web {
         protected override bool ShouldDiscoverModulesIn(string path) {
             return path.Contains("Neostructure.");
         }
+
+        protected override bool ShouldDiscoverControllersIn(System.Reflection.Assembly assembly) {
+            return assembly == typeof(ControllerBase).Assembly;
+        }
     }
 }
