@@ -10,10 +10,10 @@ using Autofac;
 using AshMind.Extensions;
 
 using AshMind.Web.Mvc;
+using AshMind.Web.Mvc.KeyModel;
 using AshMind.Web.Mvc.Routing;
 
 using Neostructure.Infrastructure.Interfaces;
-using AshMind.Web.Mvc.KeyModel;
 
 namespace Neostructure.Web {
     public class MvcApplication : ConfiguredMvcApplicationBase {
@@ -37,7 +37,7 @@ namespace Neostructure.Web {
         }
 
         protected override bool ShouldDiscoverControllersIn(System.Reflection.Assembly assembly) {
-            return assembly == typeof(ControllerBase).Assembly;
+            return assembly == typeof(MvcApplication).Assembly;
         }
     }
 }
