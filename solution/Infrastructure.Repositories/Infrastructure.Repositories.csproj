@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -96,6 +96,9 @@
     </Reference>
     <Reference Include="Migrator">
       <HintPath>..\$libraries\Migrator\Migrator.dll</HintPath>
+    </Reference>
+    <Reference Include="Migrator.Framework">
+      <HintPath>..\$libraries\Migrator\Migrator.Framework.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\$packages\NHibernate.3.0.0.4000\lib\NHibernate.dll</HintPath>
