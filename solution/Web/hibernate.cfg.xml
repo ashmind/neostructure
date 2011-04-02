@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xsi:schemaLocation="urn:nhibernate-configuration-2.2 ../.Libraries/NHibernate/nhibernate-configuration.xsd">
+                   xsi:schemaLocation="urn:nhibernate-configuration-2.2 ../$packages/NHibernate.3.0.0.4000/lib/nhibernate-configuration.xsd">
   <session-factory>
     <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
     <property name="dialect">NHibernate.Dialect.MsSql2005Dialect</property>
